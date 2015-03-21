@@ -1,0 +1,17 @@
+name: beryl
+version: 0.0.0
+author: Paul VanKeuren <paul.vankeuren@gmail.com>
+description: Polymer components for desktop applications
+dependencies:
+  async_await:
+    git: https://github.com/dart-lang/async_await.git
+  polymer: '>=0.12.0 <0.16.0'
+  pump:
+    git:
+      ref: master
+      url: git://github.com/ppvk/pump.git
+transformers:
+- async_await
+- polymer:
+    entry_points:
+    - test/demo.html
