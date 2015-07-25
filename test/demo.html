@@ -5,54 +5,49 @@
   	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>toolkit</title>
-  
-    <link rel="import" href="packages/beryl/beryl.html"> 
-    
+    <link rel="stylesheet" type="text/css" href="packages/beryl/beryl.css">
+
   </head>
-  <body unresolved>  
+  <body>
 
-    <beryl-button>Button</beryl-button>
-    <beryl-button><i class="fa fa-bicycle"></i></beryl-button>
-    <beryl-button>MORE BUTTON</beryl-button>
-    <beryl-button big="true">BIG BUTTON</beryl-button>
+    <button>Button</button>
+    <button><i class="fa fa-bicycle"></i></button>
+    <button>MORE BUTTON</button>
+    <button class="big">BIG BUTTON</button>
     
     <br><br>
     
-    <beryl-button theme="light">Button</beryl-button>
-    <beryl-button theme="light"><i class="fa fa-bicycle"></i></beryl-button>
-    <beryl-button theme="light">MORE BUTTON</beryl-button>
-    <beryl-button theme="light" big="true">BIG BUTTON</beryl-button>
+    <button class="light">Button</button>
+    <button class="light"><i class="fa fa-bicycle"></i></button>
+    <button class="light">MORE BUTTON</button>
+    <button class="light big">BIG BUTTON</button>
 
     <br><br>
     
-    <beryl-button theme="warn">Button</beryl-button>
-    <beryl-button theme="warn"><i class="fa fa-bicycle"></i></beryl-button>
-    <beryl-button theme="warn">MORE BUTTON</beryl-button>
-    <beryl-button theme="warn" big="true">BIG BUTTON</beryl-button>
+    <button class="warn">Button</button>
+    <button class="warn"><i class="fa fa-bicycle"></i></-button>
+    <button class="warn">MORE BUTTON</button>
+    <button class="warn big">BIG BUTTON</button>
     
     <br><br>
     
-    <beryl-button theme="success">Button</beryl-button>
-    <beryl-button theme="success"><i class="fa fa-bicycle"></i></beryl-button>
-    <beryl-button theme="success">MORE BUTTON</beryl-button>
-    <beryl-button theme="success" big="true">BIG BUTTON</beryl-button>
+    <button class="success">Button</button>
+    <button class="success"><i class="fa fa-bicycle"></i></button>
+    <button class="success">MORE BUTTON</button>
+    <button class="success big">BIG BUTTON</button>
     
     <br><br>
     
-    <beryl-well>Place Text into a well</beryl-well>
+    <div class="well">Place Text into a well</div>
     
     <br><br>
     
-    <beryl-panel>
+    <div class="panel">
       Or in a Panel
-      <beryl-button>Panel Button</beryl-button>
+      <button>Panel Button</button>
     
-    </beryl-panel>
+    </div>
     
     <br><br>
-    
-    <beryl-progress percent="75" status="Loading..."></beryl-progress>
-    
-    <script type="application/dart">export 'package:polymer/init.dart';</script>
   </body>
 </html>
