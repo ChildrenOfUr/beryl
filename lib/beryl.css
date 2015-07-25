@@ -334,3 +334,21 @@ button.big, .button.big {
     height: 25px;
     margin: 3px;
 }
+
+
+/*////   UTILITY   ////*/
+[flex] {
+    display:flex;
+}
+
+[horizontal] {
+    flex-direction: row;
+}
+
+[vertical] {
+    flex-direction: column;
+}
+
+[flexer] {
+    flex:1
+}
