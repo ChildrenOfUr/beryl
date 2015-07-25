@@ -1,6 +1,114 @@
+/*////     IMPORTS     ////*/
+@import "css/font-awesome.min.css";
+
+/*////      FONTS      ////*/
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Italic.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url('fonts/Lato-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url('fonts/Lato-BoldItalic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Lato Black';
+    src: url('fonts/Lato-Black.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato Black';
+    src: url('fonts/Lato-BlackItalic.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Lato Light';
+    src: url('fonts/Lato-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato Light';
+    src: url('fonts/Lato-LightItalic.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Lato Hairline';
+    src: url('fonts/Lato-Hairline.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato Hairline';
+    src: url('fonts/Lato-HairlineItalic.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Fredoka One';
+    src: url('fonts/FredokaOne-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sniglet';
+    src: url('fonts/Sniglet-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sniglet';
+    src: url('fonts/Sniglet-ExtraBold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
 /*////     RESETS      ////*/
 html, body {
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Lato', cursive;
     background-color:#eee;
     color: #444;
     overflow:hidden;
@@ -49,22 +157,23 @@ a {
     font-weight: 200;
 }
 
+
+
 /*////     BUTTONS     ////*/
 button, .button {
-    color:#fff;
+    background: #fff;
+    color:#444;
     font-family: 'Fredoka One', cursive;
     position:relative;
     min-width:30px;
     border-radius:7px;
     padding:6px;
-    background: #4b2e4c;
     border: 1px solid rgba(0,0,0,0.3);
     border-bottom:3px solid rgba(0,0,0,0.3);
     text-align:center;
     cursor: pointer;
     box-shadow:inset 0 -2px 5px 1px rgba(0,0,0,0.1);
     transition:box-shadow 0.1s, transform 0.1s;
-    background: linear-gradient(45deg, #4b2e4c 0%,#72005b 100%);
     -webkit-font-smoothing: antialiased;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -87,18 +196,141 @@ button:active {
 }
 
 button.warn, .button.warn {
+    color:#fff;
     background: #ba381a;
 }
 
 button.success, .button.success {
+    color:#fff;
     background: #57AA4B;
 }
 
-button.light, .button.light {
-    background: #fff;
-    color:#444;
+button.primary, .button.primary {
+    color:#fff;
+    background: #4b2e4c;
+    background: linear-gradient(45deg, #4b2e4c 0%,#72005b 100%);
 }
 
 button.big, .button.big {
     font-size:20px;
+}
+
+/*////   WELLS AND PANELS   ////*/
+
+.panel {
+    display: inline-block;
+    background-color:#fff;
+    border: 1px solid #bbb;
+    border-bottom:2px solid #bbb;
+    padding:4px;
+    margin:5px;
+    border-radius: 7px;
+}
+
+.well{
+    display: inline-block;
+    background-color:rgba(0,0,0,0.05);
+    border-radius:7px;
+    padding:5px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-top:2px solid rgba(0,0,0,0.1);
+}
+
+
+/*////   WINDOWS   ////*/
+
+.window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 21px;
+    width: 550px;
+    height: 350px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    overflow: hidden;
+}
+
+.window header {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    right: 40px;
+    font-size: 30px;
+    color: #444;
+    text-shadow: 0 1px rgba(100, 100, 100, 0.3);
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.window header,
+.window header > span,
+.window header > i {
+    cursor: move;
+    cursor: -webkit-grab;
+}
+
+.window header:active,
+.window header > span:active,
+.window header > i:active {
+    cursor: move;
+    cursor: -webkit-grabbing;
+}
+
+.window .fa {
+    padding: 10px 0;
+    color: #444;
+}
+
+.window article {
+    font-family: 'Tahoma', 'Geneva', 'sans-serif';
+    color: #000;
+    font-size: 12px;
+    padding: 5px;
+    position: absolute;
+    top: 55px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    border-radius: 8px;
+    background-color:rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-top:2px solid rgba(0,0,0,0.1);
+}
+
+.window .fa-times.close {
+    color: #ba381a;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: initial;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.window .footer {
+    position: absolute;
+    bottom: 5px;
+    height: 15px;
+    right: 0;
+    left: 0;
+}
+
+.window .footer * {
+    color: #444;
+    text-align: center;
+    font-size: 16px;
+    text-shadow: 0 1px rgba(100, 100, 100, 0.3);
+    float: right;
+    font-family: "Lato", sans-serif;
+}
+
+.window .footer img {
+    position: relative;
+    top: -5px;
+    height: 25px;
+    margin: 3px;
 }
